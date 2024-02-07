@@ -64,15 +64,19 @@ header .nav2 {
     color: #ffffff;
     text-decoration: none;
     font-size: 8px;
+    transition: 0.2s all ease-in;
 }
 
+.links ul li a:hover{
+    color: #8b8b8b;
+} 
 
 /*---------------Preview Movie Section------------- */
 #preview{
     height: 70vh;
-    background-image: url(assets/jjk_wallpaper.png);
+    /* background-image: url(assets/jjk_wallpaper.png); */
     /* background-image: url(assets/minions_wallpaper.png); */
-    /* background-image: url(assets/stranger-things_wallpaper.png); */
+    background-image: url(assets/stranger-things_wallpaper.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -159,8 +163,11 @@ header .nav2 {
 
 #recommendations h3{
     color: white;
+    font-family: Arial, sans-serif;
+    padding-top: 10px;
     margin-left: 20px;
-    font-size: 15px;
+    font-size: 10px;
+    font-weight: 300;
 }
 
 .carousel{
@@ -171,7 +178,17 @@ header .nav2 {
     margin-top: 5px;
 }
 
+.movie{
+    height: 75px;
+}
 
 .movie img{
     width: 120px;
+    height: 100%;
+    transition: 0.3s all ease-in-out;
+}
+
+.movie img:hover{
+    scale: 1.2;
+    transform: scaleY(1.2);
 }
