@@ -12,17 +12,19 @@
  
 /*---------------Navigation Bar------------- */
 nav {
-    background-color: #020d1911;
-    /* background-color: transparent; */
+    /* background-color: #020d193d; */
+    /* background-color: rgba(0, 0, 0, 0.228);
+    backdrop-filter: blur(10px); */
+    background-color: transparent;
     color: white;
     width: 100%;
-    height: 35px;
+    height: 65px;
     display: flex;
     justify-content: space-between;
     font-family: Arial, sans-serif;
     position: fixed;
     z-index: 1;
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 nav.scrolled{
@@ -38,7 +40,7 @@ nav.scrolled{
 header .nav1 {
     display: flex;
     width: 60%;
-    margin-left: 10px;
+    margin-left: 40px;
     color: white;
 }
 
@@ -53,7 +55,7 @@ header .nav2 {
 .links {
     display: flex;
     align-items: center;
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
 .links ul {
@@ -61,7 +63,7 @@ header .nav2 {
     list-style: none;
     justify-content: space-around;
     align-items: center;
-    gap: 8px;
+    gap: 15px;
 }
 
 .links ul li {
@@ -73,9 +75,9 @@ header .nav2 {
 }
 
 .links ul li a {
-    color: #ffffff;
+    color: whitesmoke;
     text-decoration: none;
-    font-size: 8px;
+    font-size: 15px;
     transition: 0.2s all ease-in;
 }
 
@@ -83,13 +85,20 @@ header .nav2 {
     color: #8b8b8b;
 } 
 
+.links ul li a:active{
+    color: aliceblue;
+}
+
 /*---------------Preview Movie Section------------- */
 #preview{
     top: 0;
-    height: 75vh;
-    /* background-image: url(assets/Wallpapers/jjk_wallpaper.png); */
-    background-image: url(assets/Wallpapers/minions_wallpaper.png);
+    height: 70vh;
+    background-image: url(assets/Wallpapers/jjk_wallpaper.png);
+    /* background-image: url(assets/Wallpapers/minions_wallpaper.png); */
     /* background-image: url(assets/Wallpapers/stranger-things_wallpaper.png); */
+    /* background-image: url(https://wallpaperset.com/w/full/e/e/5/106861.jpg); */
+    
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -99,6 +108,7 @@ header .nav2 {
     /* background-color: rgba(128, 128, 128, 0.2); */
     height: 100%;
     width: 40%;
+    padding-left: 35px;
 }
 
 .movieLogo{
@@ -106,12 +116,12 @@ header .nav2 {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 35px;
+    padding-top: 20%;
 }
 
 .movieLogo img{
     padding-left: 25px;
-    width: 150px;
+    width: 75%;
 }
 
 .movieInfo{
@@ -122,7 +132,7 @@ header .nav2 {
 }
 
 .movieDesc{
-    font-size: 10px;
+    font-size: 18px;
     padding-left: 20px;
     color: aliceblue;
 }
@@ -132,9 +142,9 @@ header .nav2 {
 }
 
 .movieButtons{
-    padding-top: 10px;
-    padding-left: 20px;
-    margin-top: 5px;
+    padding-top: 15px;
+    padding-left: 25px;
+    margin-top: 8px;
     display: flex;
 }
 
@@ -144,21 +154,21 @@ header .nav2 {
 
 .movieCTA1:hover{
     background-color: rgba(255, 255, 255, 0.8);
-    
 }
 
 .fa-solid.fa-play{
-    margin-right: 5px;
+    font-size: 28px;
+    margin-right: 12px;
 }
 
 .movieCTA1,.movieCTA2{
-    padding: 5px 15px;
-    font-size: 10px;
+    padding: 10px 30px;
+    font-size: 20px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     border: none;
-    border-radius: 3px;
+    border-radius: 4px;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
@@ -166,7 +176,7 @@ header .nav2 {
 .movieCTA2{
     background-color: rgba(128, 128, 128, 0.795);
     color: white;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .movieCTA2:hover{
@@ -174,22 +184,23 @@ header .nav2 {
 }
 
 .movieCTA2 img{
-    margin-right: 4px;
+    margin-right: 10px;
 }
 
 /* --------------Carousels------------- */
 #recommendations{
     background-color: var(--black-variant);
     width: 100%;
+    padding-left: 35px;
 }
 
 #recommendations h3{
     color: white;
     font-family: Arial, sans-serif;
-    padding-top: 10px;
+    padding-top: 15px;
     margin-left: 20px;
-    font-size: 10px;
-    font-weight: 300;
+    font-size: 22px;
+    font-weight: 400;
 }
 
 .carousel{
@@ -201,11 +212,12 @@ header .nav2 {
 }
 
 .movie{
-    height: 70px;
+    height: 140px;
+    margin-right: 5px;
 }
 
 .movie img{
-    width: 120px;
+    width: 250px;
     height: 100%;
     transition: 0.3s all ease-in-out;
 }
