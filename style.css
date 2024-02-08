@@ -2,23 +2,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    
 }
 
 :root{
     --black-variant: #020d19;
 }
-
+ 
 /*---------------Navigation Bar------------- */
 nav {
-    background-color: var(--black-variant);
-    color: white;
+    background-color: #020d1911;
     /* background-color: transparent; */
-    backdrop-filter:  blur(12px);
+    color: white;
     width: 100%;
     height: 35px;
     display: flex;
     justify-content: space-between;
     font-family: Arial, sans-serif;
+    position: fixed;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+}
+
+nav.scrolled{
+    background-color: var(--black-variant);
 }
 
 .logo{
@@ -60,6 +68,10 @@ header .nav2 {
     font-size: 10px;
 }
 
+.links ul li :hover{
+    cursor: pointer;
+}
+
 .links ul li a {
     color: #ffffff;
     text-decoration: none;
@@ -73,16 +85,18 @@ header .nav2 {
 
 /*---------------Preview Movie Section------------- */
 #preview{
-    height: 70vh;
-    /* background-image: url(assets/jjk_wallpaper.png); */
-    /* background-image: url(assets/minions_wallpaper.png); */
-    background-image: url(assets/stranger-things_wallpaper.png);
+    top: 0;
+    height: 75vh;
+    /* background-image: url(assets/Wallpapers/jjk_wallpaper.png); */
+    background-image: url(assets/Wallpapers/minions_wallpaper.png);
+    /* background-image: url(assets/Wallpapers/stranger-things_wallpaper.png); */
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .information{
     background-color: transparent;
+    /* background-color: rgba(128, 128, 128, 0.2); */
     height: 100%;
     width: 40%;
 }
@@ -92,7 +106,7 @@ header .nav2 {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 25px;
+    padding-top: 35px;
 }
 
 .movieLogo img{
@@ -120,26 +134,24 @@ header .nav2 {
 .movieButtons{
     padding-top: 10px;
     padding-left: 20px;
+    margin-top: 5px;
     display: flex;
 }
 
 .movieCTA1{
-    padding: 5px 15px;
-    font-size: 10px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border: none;
-    border-radius: 3px;
     background-color: white;
+}
+
+.movieCTA1:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+    
 }
 
 .fa-solid.fa-play{
     margin-right: 5px;
 }
 
-.movieCTA2{
-    margin-left: 5px;
+.movieCTA1,.movieCTA2{
     padding: 5px 15px;
     font-size: 10px;
     display: flex;
@@ -147,8 +159,18 @@ header .nav2 {
     align-items: center;
     border: none;
     border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.movieCTA2{
     background-color: rgba(128, 128, 128, 0.795);
     color: white;
+    margin-left: 5px;
+}
+
+.movieCTA2:hover{
+    background-color: rgba(128, 128, 128, 0.6);
 }
 
 .movieCTA2 img{
@@ -179,7 +201,7 @@ header .nav2 {
 }
 
 .movie{
-    height: 75px;
+    height: 70px;
 }
 
 .movie img{
@@ -187,8 +209,8 @@ header .nav2 {
     height: 100%;
     transition: 0.3s all ease-in-out;
 }
-
+/* 
 .movie img:hover{
     scale: 1.2;
     transform: scaleY(1.2);
-}
+} */
