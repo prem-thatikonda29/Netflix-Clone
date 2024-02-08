@@ -6,17 +6,18 @@
     <title>Netflix</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/netflix-icon.png">
+    <script src="https://kit.fontawesome.com/4cb6ef9691.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <nav>
+        <nav id="navbar">
             <div class="nav1">
                 <div class="logo">
                     <img src="assets/netflix logo.png" alt="Netflix logo" width="50px" height="auto">
                 </div>
                 <div class="links">
                     <ul>
-                        <li><a href="">Home</a></li>
+                        <li><a href="#">Home</a></li>
                         <li><a href="">TV Shoes</a></li>
                         <li><a href="">Movies</a></li>
                         <li><a href="">News & Popular</a></li>
@@ -43,17 +44,17 @@
         <div class="information">
             <div class="movieLogo">
                 <!-- <img src="assets/jjk_movie_logo.png" alt="Movie Logo"> -->
-                <!-- <img src="assets/depicable_me_logo.png" alt="Despicable Me 2 logo"> -->
-                <img src="assets/Stranger-Things-logo.png" alt="Stranger Things logo">
+                <img src="assets/depicable_me_logo.png" alt="Despicable Me 2 logo">
+                <!-- <img src="assets/Stranger-Things-logo.png" alt="Stranger Things logo"> -->
             </div>
             <div class="movieInfo">
                 <div class="movieDesc">
                     <!-- <p>The prequel to Jujutsu Kaisen (2020), where a high schooler gains control of an extremely powerful cursed spirit and gets enrolled in the Tokyo Prefectural Jujutsu High School by Jujutsu Sorcerers. Yuta Okkotsu is haunted. Ever since his childhood friend Rika died in a traffic accident, her ghost has stuck with him.</p> -->
 
 
-                    <!-- <p>When Gru, the world's most super-bad turned super-dad has been recruited by a team of officials to stop lethal muscle and a host of Gru's own, He has to fight back with new gadgetry, cars, and more minion madness.</p> -->
+                    <p>When Gru, the world's most super-bad turned super-dad has been recruited by a team of officials to stop lethal muscle and a host of Gru's own, He has to fight back with new gadgetry, cars, and more minion madness.</p>
 
-                    <p>Stranger Things is set in the fictional rural town of Hawkins, Indiana, in the 1980s. The nearby Hawkins National Laboratory ostensibly performs scientific research for the United States Department of Energy but secretly experiments with the paranormal and supernatural, sometimes with human test subjects.</p>
+                    <!-- <p>Stranger Things is set in the fictional rural town of Hawkins, Indiana, in the 1980s. The nearby Hawkins National Laboratory ostensibly performs scientific research for the United States Department of Energy but secretly experiments with the paranormal and supernatural, sometimes with human test subjects.</p> -->
                 </div>
                 <div class="movieButtons">
                     <button class="movieCTA1">
@@ -69,23 +70,26 @@
     <section id="recommendations">
         <h3>Recommended for you</h3>
         <div class="carousel">
+            <!-- <button onclick="prevSlide()">Previous</button>
+            <button onclick="nextSlide()">Next</button> -->
+
             <div class="movie">
-                <img src="assets/one_piece_wallpaper.png" alt="One Piece Movie Wallpaper">
+                <img src="assets/Wallpapers/one_piece_wallpaper.png" alt="One Piece Movie Wallpaper">
             </div>
             <div class="movie">
-                <img src="assets/friends_wallpaper.png" alt="Friends Wallpaper">
+                <img src="assets/Wallpapers/friends_wallpaper.png" alt="Friends Wallpaper">
             </div>
             <div class="movie">
-                <img src="assets/breaking_bad_wallpaper.png" alt="Breaking Bad Wallpaper">
+                <img src="assets/Wallpapers/breaking_bad_wallpaper.png" alt="Breaking Bad Wallpaper">
             </div>
             <div class="movie">
-                <img src="assets/peaky_blinders_wallpaper.png" alt="Peaky Blinders Wallpaper">
+                <img src="assets/Wallpapers/peaky_blinders_wallpaper.png" alt="Peaky Blinders Wallpaper">
             </div>
             <div class="movie">
-                <img src="assets/titanic-movie-wallpaper.png" alt="Titanic Wallpaper">
+                <img src="assets/Wallpapers/titanic-movie-wallpaper.png" alt="Titanic Wallpaper">
             </div>
             <div class="movie">
-                <img src="assets/kung_fu_panda.png" alt="Kung Fu Panda Wallpaper">
+                <img src="assets/Wallpapers/kung_fu_panda.png" alt="Kung Fu Panda Wallpaper">
             </div>
         </div>
     </section>
@@ -93,14 +97,45 @@
         <h3>Continue watching for Prem</h3>
         <div class="carousel">
             <div class="movie">
-                <img src="assets/peaky_blinders_wallpaper.png" alt="Peaky Blinders Wallpaper">
+                <img src="assets/Wallpapers/peaky_blinders_wallpaper.png" alt="Peaky Blinders Wallpaper">
             </div>
             <div class="movie">
-                <img src="assets/kung_fu_panda.png" alt="Kung Fu Panda Wallpaper">
+                <img src="assets/Wallpapers/kung_fu_panda.png" alt="Kung Fu Panda Wallpaper">
+            </div>
+        </div>
+    </section>
+    <section id="recommendations">
+        <h3>Top Hollywood Movies</h3>
+        <div class="carousel">
+            <div class="movie">
+                <img src="assets/Wallpapers/inception_wallpaper.png" alt="Inception Wallpaper">
+            </div>
+            <div class="movie">
+                <img src="assets/Wallpapers/shawshank_wallpaper.png" alt="Shawshank Redemption Wallpaper">
+            </div>
+            <div class="movie">
+                <img src="assets/Wallpapers/the-matrix_wallpaper.png" alt="The Matrix Wallpaper">
+            </div>
+            <div class="movie">
+                <img src="assets/Wallpapers/the_godfather_wallpaper.png" alt="The Godfather Wallpaper">
+            </div>
+            <div class="movie">
+                <img src="assets/Wallpapers/fight_club_wallpaper.png" alt="Fight Club Wallpaper">
+            </div>
+            <div class="movie">
+                <img src="assets/Wallpapers/interstellar_wallpaper.png" alt="Interstellar Wallpaper">
             </div>
         </div>
     </section>
 </body>
-
-<script src="https://kit.fontawesome.com/4cb6ef9691.js" crossorigin="anonymous"></script>
+<script>
+    window.onscroll = function() {
+    var navbar = document.getElementById('navbar');
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+    };
+</script>
 </html>
