@@ -8,6 +8,7 @@ else{
 }
 };
 
+
 const initSlider = () => {
     const imageList = document.querySelector(".carousel .movie");
     const sliderButtons = document.querySelectorAll(".carousel .carousel-button");
