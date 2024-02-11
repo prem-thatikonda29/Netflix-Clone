@@ -9,18 +9,21 @@ else{
 };
 
 
-const initSlider = () => {
-    const imageList = document.querySelector(".carousel .movie");
-    const sliderButtons = document.querySelectorAll(".carousel .carousel-button");
+const initSlider = (sectionId) => {
+    const imageList = document.querySelector(`#${sectionId} .carousel .movie`);
+    const sliderButtons = document.querySelectorAll(`#${sectionId} .carousel .carousel-button`);
+    
     sliderButtons.forEach(button => {
         button.addEventListener("click", () => {
-            button.addEventListener("click", () => {
-                const direction = button.id === "prev-slide" ? -1 : 1 
-                const scrollAmount = imageList.clientWidth * direction
-                imageList.scrollBy({left: scrollAmount, behavior: "smooth"})
-            })
-        })
-    })
+            const direction = button.id === "prev-slide" ? -1 : 1;
+            const scrollAmount = imageList.clientWidth * direction;
+            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+    });
 }
 
-window.addEventListener("load", initSlider)
+window.addEventListener("load", () => {
+    initSlider("recommendations-1");
+    initSlider("recommendations-2");
+    initSlider("recommendations-3");
+});
