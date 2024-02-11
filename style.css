@@ -79,6 +79,7 @@ header .nav2 {
     text-decoration: none;
     font-size: 15px;
     transition: 0.2s all ease-in;
+    text-shadow: 2px 2px 2px rgb(55, 55, 55);
 }
 
 .links ul li a:hover{
@@ -92,13 +93,13 @@ header .nav2 {
 /*---------------Preview Movie Section------------- */
 #preview{
     top: 0;
-    height: 70vh;
-    background-image: url(assets/Wallpapers/jjk_wallpaper.png);
+    height: 80vh;
+    /* background-image: url(assets/Wallpapers/jjk_wallpaper.png); */
     /* background-image: url(assets/Wallpapers/minions_wallpaper.png); */
-    /* background-image: url(assets/Wallpapers/stranger-things_wallpaper.png); */
+    background-image: url(assets/Wallpapers/stranger-things_wallpaper.png);
     /* background-image: url(https://wallpaperset.com/w/full/e/e/5/106861.jpg); */
     
-    background-position: center;
+    background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -154,7 +155,7 @@ header .nav2 {
 }
 
 .movieCTA1:hover{
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.707);
 }
 
 .fa-solid.fa-play{
@@ -194,6 +195,7 @@ header .nav2 {
     padding-left: 35px;
     max-width: 100%;
     width: 100%;
+    padding-bottom: 35px;
 }
 
 .recommendations h3 {
@@ -203,7 +205,7 @@ header .nav2 {
     margin-left: 20px;
     font-size: 22px;
     font-weight: 400;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .carousel {
@@ -213,7 +215,7 @@ header .nav2 {
 .carousel .movie {
     display: grid;
     gap: 6px;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(25, 1fr);
     font-size: 0;
     overflow-x: auto;
     scrollbar-width: none;
