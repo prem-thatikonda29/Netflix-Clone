@@ -6,6 +6,7 @@
     <title>Netflix</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/netflix-icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
     <script src="https://kit.fontawesome.com/4cb6ef9691.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -73,88 +74,51 @@
     <section id="recommendations">
         <h3>Recommended for you</h3>
         <div class="carousel">
-            <!-- <button onclick="prevSlide()">Previous</button>
-            <button onclick="nextSlide()">Next</button> -->
-
             <div class="movie">
-                    <img src="assets/Wallpapers/one_piece_wallpaper.png" alt="One Piece Movie Wallpaper">
-                <div class="img-info">
-                    <h3>One Piece</h3>
-                    <p>Kaizoku ni naru</p>
-                </div>
-            </div>
-            <div class="movie">
-                <img src="assets/Wallpapers/friends_wallpaper.png" alt="Friends Wallpaper">
-            </div>
-            <div class="movie">
-                <img src="assets/Wallpapers/breaking_bad_wallpaper.png" alt="Breaking Bad Wallpaper">
-            </div>
-            <div class="movie">
-                <img src="assets/Wallpapers/peaky_blinders_wallpaper.png" alt="Peaky Blinders Wallpaper">
-            </div>
-            <div class="movie">
-                <img src="assets/Wallpapers/titanic-movie-wallpaper.png" alt="Titanic Wallpaper">
-            </div>
-            <div class="movie">
-                <img src="assets/Wallpapers/kung_fu_panda.png" alt="Kung Fu Panda Wallpaper">
+                <img src="assets/Wallpapers/one_piece_wallpaper.png" alt="">
+                <img src="assets/Wallpapers/breaking_bad_wallpaper.png" alt="">
+                <img src="assets/Wallpapers/friends_wallpaper.png" alt="">
+                <img src="assets/Wallpapers/kung_fu_panda.png" alt="">
+                <img src="assets/Wallpapers/minions_wallpaper.png" alt="">
+                <img src="assets/Wallpapers/stranger-things_wallpaper.png" alt="">
+                <img src="assets/Wallpapers/the_office_wallpaper.png" alt="">
             </div>
         </div>
     </section>
     <section id="recommendations">
         <h3>Continue watching for Prem</h3>
         <div class="carousel">
+            <button id="prev-slide" class="carousel-button material-symbols-rounded">Chevron_left</button>
             <div class="movie">
                 <img src="assets/Wallpapers/peaky_blinders_wallpaper.png" alt="Peaky Blinders Wallpaper">
+                <img src="assets/Wallpapers/breaking_bad_wallpaper.png" alt="Breaking Bad">
+                <img src="assets/Wallpapers/friends_wallpaper.png" alt="Breaking Bad">
+                <img src="assets/Wallpapers/inception_wallpaper.png" alt="Breaking Bad">
+                <img src="assets/Wallpapers/jjk_wallpaper.png" alt="Breaking Bad">
+                <img src="assets/Wallpapers/shawshank_wallpaper.png" alt="Breaking Bad">
+                <img src="assets/Wallpapers/minions_wallpaper.png" alt="Breaking Bad">
             </div>
-            <div class="movie">
-                <img src="assets/Wallpapers/kung_fu_panda.png" alt="Kung Fu Panda Wallpaper">
-            </div>
-            <div class="movie">
-                <img src="assets/Wallpapers/friends_wallpaper.png" alt="Friends Wallpaper">
-            </div>
-            <div class="movie">
-                <img src="assets/Wallpapers/breaking_bad_wallpaper.png" alt="Breaking Bad Wallpaper">
-            </div>
-            <div class="movie">
-                <img src="assets/Wallpapers/peaky_blinders_wallpaper.png" alt="Peaky Blinders Wallpaper">
-            </div>
-            <div class="movie">
-                <img src="assets/Wallpapers/titanic-movie-wallpaper.png" alt="Titanic Wallpaper">
-            </div>
+            <button id="next-slide" class="carousel-button material-symbols-rounded">Chevron_right</button>
         </div>
     </section>
     <section id="recommendations">
         <h3>Top Hollywood Movies</h3>
         <div class="carousel">
-            <div class="movie">
-                <img src="assets/Wallpapers/inception_wallpaper.png" alt="Inception Wallpaper">
-            </div>
-            <div class="movie">
-                <img src="assets/Wallpapers/shawshank_wallpaper.png" alt="Shawshank Redemption Wallpaper">
-            </div>
-            <div class="movie">
-                <img src="assets/Wallpapers/the-matrix_wallpaper.png" alt="The Matrix Wallpaper">
-            </div>
-            <div class="movie">
-                <img src="assets/Wallpapers/the_godfather_wallpaper.png" alt="The Godfather Wallpaper">
-            </div>
-            <div class="movie">
-                <img src="assets/Wallpapers/fight_club_wallpaper.png" alt="Fight Club Wallpaper">
-            </div>
-            <div class="movie">
-                <img src="assets/Wallpapers/interstellar_wallpaper.png" alt="Interstellar Wallpaper">
+            <button id="prev-slide" class="carousel-button material-symbols-rounded">Chevron_left</button>
+                <div class="movie">
+                    <img src="assets/Wallpapers/breaking_bad_wallpaper.png" alt="">
+                    <img src="assets/Wallpapers/fight_club_wallpaper.png" alt="">
+                    <img src="assets/Wallpapers/inception_wallpaper.png" alt="">
+                    <img src="assets/Wallpapers/interstellar_wallpaper.png" alt="">
+                    <img src="assets/Wallpapers/shawshank_wallpaper.png" alt="">
+                    <img src="assets/Wallpapers/the_godfather_wallpaper.png" alt="">
+                    <img src="assets/Wallpapers/the-matrix_wallpaper.png" alt="">
+                    <img src="assets/Wallpapers/stranger-things_wallpaper.png" alt="">
+                </div>
+            <button id="next-slide" class="carousel-button material-symbols-rounded">Chevron_right</button>
             </div>
         </div>
     </section>
 </body>
-<script>
-    window.onscroll = function() {
-    var navbar = document.getElementById('navbar');
-    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-    };
-</script>
+<script src="script.js"></script>
 </html>
