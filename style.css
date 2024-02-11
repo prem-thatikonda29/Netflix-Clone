@@ -189,15 +189,14 @@ header .nav2 {
 }
 
 /* --------------Carousels------------- */
-#recommendations{
+.recommendations {
     background-color: var(--black-variant);
-    /* width: 100%; */
     padding-left: 35px;
     max-width: 100%;
     width: 100%;
 }
 
-#recommendations h3{
+.recommendations h3 {
     color: white;
     font-family: Arial, sans-serif;
     padding-top: 15px;
@@ -207,33 +206,32 @@ header .nav2 {
     margin-bottom: 5px;
 }
 
-.carousel .movie{
+.carousel {
+    position: relative;
+}
+
+.carousel .movie {
     display: grid;
     gap: 6px;
-    grid-template-columns: repeat(10,1fr) ;
+    grid-template-columns: repeat(10, 1fr);
     font-size: 0;
     overflow-x: auto;
     scrollbar-width: none;
     margin-left: 20px;
 }
 
-.carousel .movie img{
+.carousel .movie img {
     width: 240px;
     height: 150px;
     object-fit: cover;
 }
 
-.carousel {
-    position: relative;
-}
-
-.carousel .carousel-button{
+.carousel .carousel-button {
     position: absolute;
     top: 50%;
     height: 150px;
     width: 60px;
     background-color: #42424238;
-    /* background-color: #020d19; */
     color: aliceblue;
     font-size: 2.2rem;
     cursor: pointer;
@@ -244,7 +242,7 @@ header .nav2 {
     transition: 0.3s all ease-in-out;
 }
 
-.carousel .carousel-button:hover{
+.carousel .carousel-button:hover {
     background-color: #1a1a1ab6;
     font-size: 3.5rem;
 }
