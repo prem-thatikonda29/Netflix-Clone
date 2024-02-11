@@ -1,4 +1,4 @@
-//--------------------NAVBAR ANIMATION-------------------
+//<--------------------NAVBAR ANIMATION------------------->
 window.onscroll = function() {
 var navbar = document.getElementById('navbar');
 if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
@@ -10,7 +10,57 @@ else{
 };
 
 
-//--------------------DYNAMIC IMAGE LOADING & BUTTON CONTROLS----------------
+
+//<--------------------DYNAMIC PREVIEW IMAGE LOADING & BUTTON CONTROLS---------------->
+window.addEventListener("load", () => {
+    const moviesData = [
+        {
+            backgroundImagePath: "assets/Wallpapers/stranger-things_wallpaper.png",
+            logoPath: "assets/Stranger-Things-logo.png",
+            description: "Stranger Things is set in the fictional rural town of Hawkins, Indiana, in the 1980s. The nearby Hawkins National Laboratory ostensibly performs scientific research for the United States Department of Energy but secretly experiments with the paranormal and supernatural, sometimes with human test subjects."
+        },
+        {
+            backgroundImagePath: "assets/Wallpapers/jjk_wallpaper.png",
+            logoPath: "assets/jjk_movie_logo.png",
+            description: "The prequel to Jujutsu Kaisen (2020), where a high schooler gains control of an extremely powerful cursed spirit and gets enrolled in the Tokyo Prefectural Jujutsu High School by Jujutsu Sorcerers. Yuta Okkotsu is haunted. Ever since his childhood friend Rika died in a traffic accident, her ghost has stuck with him."
+        },
+        {
+            backgroundImagePath: "assets/Wallpapers/minions_wallpaper.png",
+            logoPath: "assets/depicable_me_logo.png",
+            description: "When Gru, the world's most super-bad turned super-dad has been recruited by a team of officials to stop lethal muscle and a host of Gru's own, He has to fight back with new gadgetry, cars, and more minion madness."
+        }
+    ];
+
+    // Select the #preview element
+    const previewSection = document.querySelector("#preview");
+
+    // Randomly select a movie
+    const randomIndex = Math.floor(Math.random() * moviesData.length);
+    const selectedMovie = moviesData[randomIndex];
+
+    // Set the background image dynamically
+    if (selectedMovie.backgroundImagePath) {
+        previewSection.style.backgroundImage = `url(${selectedMovie.backgroundImagePath})`;
+    }
+
+    // Select the elements for movieLogo and movieDesc
+    const movieLogo = document.querySelector("#preview .movieLogo img");
+    const movieDesc = document.querySelector("#preview .movieDesc p");
+
+    // Update the content dynamically
+    if (selectedMovie.logoPath) {
+        movieLogo.src = selectedMovie.logoPath;
+        movieLogo.alt = "Movie Logo";
+    }
+
+    if (selectedMovie.description) {
+        movieDesc.textContent = selectedMovie.description;
+    }
+});
+
+
+
+//<--------------------DYNAMIC CAROUSEL IMAGE LOADING & BUTTON CONTROLS---------------->
 const initSlider = (sectionId, imagePaths) => {
     const imageList = document.querySelector(`#${sectionId} .carousel .movie`);
     const sliderButtons = document.querySelectorAll(`#${sectionId} .carousel .carousel-button`);
