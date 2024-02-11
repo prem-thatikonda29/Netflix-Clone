@@ -1,3 +1,4 @@
+//--------------------NAVBAR ANIMATION-------------------
 window.onscroll = function() {
 var navbar = document.getElementById('navbar');
 if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
@@ -9,6 +10,7 @@ else{
 };
 
 
+//--------------------DYNAMIC IMAGE LOADING & BUTTON CONTROLS----------------
 const initSlider = (sectionId, imagePaths) => {
     const imageList = document.querySelector(`#${sectionId} .carousel .movie`);
     const sliderButtons = document.querySelectorAll(`#${sectionId} .carousel .carousel-button`);
@@ -38,9 +40,11 @@ const initSlider = (sectionId, imagePaths) => {
 
 window.addEventListener("load", () => {
     // Specify image paths for each recommendation
+    const imagesRecommendations1 = ["assets/Wallpapers/avengers-1.png", "assets/Wallpapers/avengers-civil-war.png", "assets/Wallpapers/avengers-ultron.png", "assets/Wallpapers/avengers-infinity-war.png", "assets/Wallpapers/avengers-endgame.png"];
+
     const imagesRecommendations2 = ["assets/Wallpapers/friends_wallpaper.png", "assets/Wallpapers/peaky_blinders_wallpaper.png", "assets/Wallpapers/stranger-things_wallpaper.png"];
-    const imagesRecommendations1 = ["path4.jpg", "path5.jpg", "path6.jpg"];
-    const imagesRecommendations3 = ["path7.jpg", "path8.jpg", "path9.jpg"];
+
+    const imagesRecommendations3 = ["assets/Wallpapers/annabelle.png", "assets/Wallpapers/annabelle-creation.png", "assets/Wallpapers/annabelle-comes-home.png", "assets/Wallpapers/the-conjuring-2.png", "assets/Wallpapers/conjuring-3.png", "assets/Wallpapers/stranger-things_wallpaper.png"];
 
     // Initialize sliders for each recommendation
     initSlider("recommendations-1", imagesRecommendations1);
