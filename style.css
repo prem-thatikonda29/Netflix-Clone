@@ -94,11 +94,6 @@ header .nav2 {
 #preview{
     top: 0;
     height: 80vh;
-    /* background-image: url(assets/Wallpapers/jjk_wallpaper.png); */
-    /* background-image: url(assets/Wallpapers/minions_wallpaper.png); */
-    background-image: url(assets/Wallpapers/stranger-things_wallpaper.png);
-    /* background-image: url(https://wallpaperset.com/w/full/e/e/5/106861.jpg); */
-    
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -137,6 +132,7 @@ header .nav2 {
     font-size: 18px;
     padding-left: 20px;
     color: aliceblue;
+    line-height: 1.5rem;
 }
 
 .movieDesc p{
