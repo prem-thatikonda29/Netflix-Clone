@@ -264,3 +264,21 @@ header .nav2 {
     right: 0;
 }
 
+
+/*---------------------FOOTER-------------------- */
+footer{
+    background-color: #020d19;
+    /* background-color: #141414; */
+    color: white;
+    padding: 50px;
+    padding: 60px 40px;
+}
+
+.footer-one{
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.footer-one img{
+    width: 100%;
+}
