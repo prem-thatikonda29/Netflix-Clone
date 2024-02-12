@@ -117,6 +117,7 @@ header .nav2 {
 
 .movieLogo img{
     padding-left: 25px;
+    margin-bottom: 10px;
     width: 60%;
 }
 
@@ -209,29 +210,27 @@ header .nav2 {
 }
 
 .carousel .movie {
-    display: grid;
-    gap: 6px;
-    grid-template-columns: repeat(25, 1fr);
-    font-size: 0;
+    display: flex;
     overflow-x: auto;
     scrollbar-width: none;
     margin-left: 20px;
+    /* margin-right: -100px;
+    padding-right: 100px; */
 }
 
-.carousel .movie .indimovie{
+.carousel .movie .indimovie {
+    flex: 0 0 240px;
     transition: 0.3s ease-in-out;
-    overflow-x: visible;
+    /* overflow-x: visible; */
 }
 
 .carousel .movie .indimovie img {
-    width: 240px;
-    height: 150px;
-    object-fit: cover;
     transition: transform .3s ease-in-out;
 }
 
-.carousel .movie .indimovie:hover{
-    transform: scale(1.3);
+.carousel .movie .indimovie:hover {
+    /* transform: scale(1.3); */
+    background-position: center left;
     z-index: 3;
 }
 
@@ -264,3 +263,4 @@ header .nav2 {
 .carousel #next-slide {
     right: 0;
 }
+
