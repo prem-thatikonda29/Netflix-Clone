@@ -218,10 +218,21 @@ header .nav2 {
     margin-left: 20px;
 }
 
-.carousel .movie img {
+.carousel .movie .indimovie{
+    transition: 0.3s ease-in-out;
+    overflow-x: visible;
+}
+
+.carousel .movie .indimovie img {
     width: 240px;
     height: 150px;
     object-fit: cover;
+    transition: transform .3s ease-in-out;
+}
+
+.carousel .movie .indimovie:hover{
+    transform: scale(1.3);
+    z-index: 3;
 }
 
 .carousel .carousel-button {
@@ -238,6 +249,7 @@ header .nav2 {
     outline: none;
     transform: translateY(-50%);
     transition: 0.3s all ease-in-out;
+    z-index: 100;
 }
 
 .carousel .carousel-button:hover {
