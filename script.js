@@ -10,7 +10,6 @@ else{
 };
 
 
-
 //<--------------------DYNAMIC PREVIEW IMAGE LOADING & BUTTON CONTROLS---------------->
 window.addEventListener("load", () => {
     const moviesData = [
@@ -68,13 +67,25 @@ const initSlider = (sectionId, imagePaths) => {
     // Function to load images into the carousel
     const loadImages = () => {
         imagePaths.forEach((path) => {
+            const indiMovieDiv = document.createElement("div");
+            indiMovieDiv.classList.add("indimovie"); // Add the .indimovie class to the div
+    
             const img = document.createElement("img");
+    
+            indiMovieDiv.style.width = "240px";  // Set your width accordingly
+            indiMovieDiv.style.height = "150px"; // Set your height accordingly
+            indiMovieDiv.style.overflow = "hidden"; // Hide overflow to contain the image within the div
+    
             img.src = path;
             img.alt = "Image"; // Set your alt text accordingly
-            imageList.appendChild(img);
-            img.style.backgroundPosition="center";
+            img.style.width = "100%"; // Make the image fill the div width
+            img.style.height = "100%"; // Make the image fill the div height
+            img.style.objectFit = "cover"; // Maintain aspect ratio and cover the entire div
+            img.style.backgroundPosition = "center";
+    
+            indiMovieDiv.appendChild(img);
+            imageList.appendChild(indiMovieDiv);
         });
-        
     };
 
     // Call the function to load images
